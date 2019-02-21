@@ -1,24 +1,17 @@
 <template>
     <div>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <router-link to="/" class="nav-link">Home</router-link>
-                    </li>
-                    <li class="nav-item">
-                        <router-link to="/about" class="nav-link">About</router-link>
-                    </li>
-                    <li class="nav-item">
-                        <router-link to="/contact" class="nav-link">Contact</router-link>
-                    </li>
-                    <li class="nav-item">
-                        <router-link to="/hello" class="nav-link">Hello</router-link>
-                    </li>
-                </ul>
+        <div class="masthead clearfix">
+            <div class="inner">
+                <h3 class="masthead-brand"><router-link to="/" class="link-no-underline">Sam Morrison</router-link></h3>
+                <nav class="nav nav-masthead">
+                    <router-link to="/" class="nav-link">Home</router-link>
+                    <router-link to="/about" class="nav-link">About</router-link>
+                    <router-link to="/contact" class="nav-link">Contact</router-link>
+                    <router-link to="/hello" class="nav-link">Hello</router-link>
+                </nav>
             </div>
-        </nav>
-        <router-view class="view"></router-view>
+        </div>
+        <router-view></router-view>
     </div>
 </template>
 
