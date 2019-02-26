@@ -7,7 +7,7 @@ import HelloWorld from './components/HelloWorld.vue';
 
 Vue.use(VueRouter);
 
-const catchAll = { path: "*", name: "not-found", component: require('./components/not_found.vue').default };
+const catchAll = { path: "*", name: "not-found", component: require('./components/NotFound.vue').default };
 let routes = [
     catchAll,
     { path: '/', component: Home },
