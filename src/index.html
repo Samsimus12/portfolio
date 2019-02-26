@@ -4,10 +4,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Sam Morrison</title>
-        <link rel="stylesheet" href="/src/assets/bootstrap-4.0.0-dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/src/assets/fontawesome-free-5.7.2-web/css/all.css">
-        <link rel="stylesheet" href="/src/styles/cover.css">
-        <link rel="stylesheet" href="/src/styles/main.css">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
     </head>
 
     <body>
@@ -15,9 +13,11 @@
             <div class="site-wrapper-inner">
                 <div class="cover-container">
                     <nav-bar></nav-bar>
+                    <router-view></router-view>
+                    <footer-bar></footer-bar>
                 </div>
             </div>
         </div>
-        <script src="./dist/bundle.js"></script>
+        <script src="./bundle.js"></script>
     </body>
 </html>

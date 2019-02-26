@@ -8,6 +8,6 @@ import (
 func main() {
 	color.Green("Starting Server...")
 	e := echo.New()
-	e.Static("/", "")
+	e.Static("/", "dist")
 	e.Logger.Fatal(e.Start(":8080"))
 }
