@@ -8,6 +8,7 @@
     "bootstrap-vue": "^2.0.0-rc.13",
     "formvuelar": "^0.2.6",
     "lodash": "^4.17.11",
+    "vee-validate": "^2.1.7",
     "vue": "^2.6.7",
     "vue-material": "^1.0.0-beta-10.2",
     "vue-router": "^3.0.2",
