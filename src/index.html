@@ -5,17 +5,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Sam Morrison</title>
         <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+        <!--<link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">-->
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+        <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
     </head>
 
     <body>
-        <div id="app" class="site-wrapper">
-            <div class="site-wrapper-inner">
-                <div class="cover-container">
-                    <nav-bar></nav-bar>
-                    <router-view></router-view>
-                    <footer-bar></footer-bar>
-                </div>
+        <div id="app">
+            <nav-bar></nav-bar>
+            <div>
+                <router-view></router-view>
+                <footer-bar></footer-bar>
             </div>
         </div>
         <script src="./bundle.js"></script>

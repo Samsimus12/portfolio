@@ -9,6 +9,7 @@ module.exports = {
     entry: {
         app: path.join(__dirname,'src/app.js')
     },
+    devtool: 'inline-source-map',
     plugins: [
         new CleanWebpackPlugin(['dist']),
         new VueLoaderPlugin(),
@@ -24,17 +25,23 @@ module.exports = {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist')
     },
-    resolve: {        alias: {
+    resolve: {
+        alias: {
             vue: 'vue/dist/vue.js'
         }
     },
     module: {
         rules: [
-//            {
-//                test: /\.js$/,
-//                loader: 'babel-loader',
-//                exclude: /node_modules/
-//            },
+            {
+                test: /\.m?js$/,
+                exclude: /(node_modules|bower_components)/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env']
+                    }
+                }
+            },
             {
                 test: /\.(html)$/,
                 use: {
@@ -45,8 +52,8 @@ module.exports = {
                 }
             },
             {
-                test: /\.css$/,
-                use:  [  'style-loader', MiniCssExtractPlugin.loader, 'css-loader']
+                test: /\.(css|scss)$/,
+                use:  [  'style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
             },
             {
                 test: /\.(png|svg|jpg|JPG|gif|woff|woff2|eot|ttf|otf)$/,

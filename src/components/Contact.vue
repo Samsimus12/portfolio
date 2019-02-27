@@ -1,7 +1,11 @@
 <template>
-    <h1>Contact</h1>
+    <div>
+        <h1 class="text-center">Contact</h1>
+        <simple-form class="simple-form"></simple-form>
+    </div>
 </template>
 
 <script>
-    export default { name: "Contact" }
+    import SimpleForm from './SimpleForm.vue'
+    export default { name: "Contact", components: { SimpleForm } }
 </script>
