@@ -1,7 +1,6 @@
 <template>
     <div>
-        <h1 class="text-center">Contact</h1>
-        <simple-form class="simple-form"></simple-form>
+        <simple-form class="simple-form" :title="'Contact'"></simple-form>
     </div>
 </template>
 

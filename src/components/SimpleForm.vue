@@ -2,6 +2,7 @@
     <div>
         <form novalidate class="md-layout" @submit.prevent="validateForm">
             <md-card class="md-layout-item bg-light">
+                <h3 class="text-center">{{ title }}</h3>
                 <md-card-content>
                     <md-field :class="getValidationClass('firstName')">
                         <label>First Name</label>
@@ -50,6 +51,7 @@
     export default {
         name: "SimpleForm",
         mixins: [validationMixin],
+        props: ['title'],
         data() {
             return {
                 firstName: null,

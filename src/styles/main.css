@@ -8,7 +8,9 @@ body {
     width: 25%;
 }
 .simple-form {
-    margin: auto;
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
     width: 20%;
 }
 .nav-background {
