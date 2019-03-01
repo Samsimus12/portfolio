@@ -17,18 +17,25 @@
                         <span class="md-error" v-if="!$v.lastName.required">The last name is required</span>
                         <span class="md-error" v-else-if="!$v.lastName.minlength">Invalid last name</span>
                     </md-field>
+
                     <md-field :class="getValidationClass('email')">
                         <label>Email</label>
                         <md-input type="email" v-model="email" required></md-input>
                         <span class="md-error" v-if="!$v.email.required">The email is required</span>
                         <span class="md-error" v-else-if="!$v.email.email">Invalid email</span>
                     </md-field>
+
+                    <md-datepicker v-model="selectedDate">
+                        <label>Select date</label>
+                    </md-datepicker>
+
                     <md-field :class="getValidationClass('message')">
                         <label>Message</label>
                         <md-textarea v-model="message" required></md-textarea>
                         <span class="md-error" v-if="!$v.message.required">The first name is required</span>
                         <span class="md-error" v-else-if="!$v.message.minlength">Invalid first name</span>
                     </md-field>
+
                     <md-card-actions>
                         <md-button class="md-dense md-raised bg-primary text-light" type="submit">Send</md-button>
                     </md-card-actions>
@@ -57,6 +64,7 @@
                 firstName: null,
                 lastName: null,
                 email: null,
+                selectedDate: null,
                 message: null,
                 messageSent: false,
                 sending: false,
@@ -106,6 +114,7 @@
                 this.message = null;
                 this.messageSent = false;
                 this.sending = false;
+                this.selectedDate = null;
             },
             validateForm () {
                 this.$v.$touch();

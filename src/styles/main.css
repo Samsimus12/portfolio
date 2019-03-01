@@ -1,8 +1,10 @@
-html,
+html {
+    background-color: #efefef !important;
+}
 body {
-    height: 100%;
     background-color: #efefef;
 }
+[v-cloak] {display: none}
 .home-container {
     margin: auto;
     width: 25%;
@@ -15,6 +17,7 @@ body {
 }
 .nav-background {
     background: #d3d3d3;
+    width: 100%;
 }
 .footer {
     position: fixed;
@@ -34,4 +37,8 @@ body {
 }
 .cornflower-blue {
     color: #6495ed;
+}
+.center-images {
+    margin: auto;
+    width: 50%;
 }
